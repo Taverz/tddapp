@@ -1,16 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:mockito/mockito.dart' as mock;
 import 'package:tddapp/enitites/number_trivia.dart';
-import 'package:tddapp/failure.dart';
 import 'package:tddapp/get_concrete_number_trivia.dart';
 import 'package:tddapp/repository.dart';
-import 'package:flutter_test/flutter_test.dart' as flutter_test;
-
-// import '../../lib/repository.dart';
-typedef Swerr = Future<(FailureApp, NumberTrivial)>;
 
 class MockNumberTriviaRepository extends Mock
     implements NumberTrivialRepository {}
