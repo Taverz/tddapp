@@ -3,7 +3,8 @@ import 'package:tddapp/failure.dart';
 
 import 'enitites/number_trivia.dart';
 
+typedef NumberTrivialFailure = Future<Either<FailureApp, NumberTrivial>>? ; //Future<(FailureApp? , NumberTrivial?)?>? ;
 abstract class NumberTrivialRepository {
-  Future<Either<FailureApp, NumberTrivial>> getConcreteNumberTrivia(int? number);
-  Future<Either<FailureApp, NumberTrivial>> getRandomNumberTrivia();
+  NumberTrivialFailure getConcreteNumberTrivia(int? number);
+  NumberTrivialFailure getRandomNumberTrivia();
 }

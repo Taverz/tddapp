@@ -19,8 +19,8 @@ class GetConcreteNumberTrivia implements UseCase<NumberTrivial, ParamsW> {
   // }
 
   @override
-  Future<Either<FailureApp, NumberTrivial>?> call(ParamsW params)async{
-    return await repository.getConcreteNumberTrivia(params.number);
+  Future<Either<FailureApp, NumberTrivial>> call(ParamsW params)async{
+    return Right(NumberTrivial(number: 1, text: 'test'));
   }
 
 
