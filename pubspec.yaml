@@ -29,6 +29,10 @@ dependencies:
   http: any
   # Local cache
   shared_preferences: any
+  ### Check netwoek  state  
+  # data_connection_checker: ^0.3.3
+  flutter_network_connectivity: ^0.0.6
+  connectivity_checker: ^1.1.0
 
 dev_dependencies:
   flutter_test:
