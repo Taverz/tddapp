@@ -18,13 +18,18 @@ void main(){
     networklInfoImpl = NetworkinfoImpl(mockDataConnectionChecker);
   });
 
-  group('', 
+  group('isConnected', 
     () async { 
-        when(mockDataConnectionChecker.isInternetAvailable).thenAnswer((_)  => false);
+      test('should frward the call to DataConnectionChecker.hashConnection',()async{
+        final tHanasConnectionFuture = await  Future.value(true);
+
+        when(mockDataConnectionChecker.isInternetAvailable).thenAnswer((_)  =>  tHanasConnectionFuture);
 
         final result = await networklInfoImpl.isConnect;
         verify(mockDataConnectionChecker.isInternetAvailable);
-        expect(result, true);
+        expect(result, tHanasConnectionFuture);
+        },
+      ); 
     },
   );
 }
